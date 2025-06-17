@@ -1,1 +1,4 @@
-# My First System Engineering DevOps Project
+# 0x00-shell_basics
+
+This repository contains basic shell script tasks.
+
