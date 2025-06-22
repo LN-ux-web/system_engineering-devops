@@ -1,4 +1,2 @@
-# 0x00-shell_basics
-
-This repository contains basic shell script tasks.
-
+# System Engineering DevOps
+ALX project to practice basic shell permissions and scripting.
