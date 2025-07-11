@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script displays sorted filenames, showing only the part after the first dash
+
+for file in *-*; do
+  [ -e "$file" ] || continue  # Skip if no matching files
+  echo "${file#*-}"
+done | sort
