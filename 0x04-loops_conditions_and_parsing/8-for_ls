@@ -1,9 +1,3 @@
 #!/usr/bin/env bash
-# This script lists filenames in sorted order, showing only the part after the first dash
-
-for file in $(ls | sort); do
-  if [[ "$file" == *-* ]]; then
-    echo "${file#*-}"
-  fi
-done
-
+# This script lists non-hidden files with name after first dash
+for file in *; do if [[ "$file" != *-* ]]; then echo "$file"; else echo "${file#*-}"; fi; done
