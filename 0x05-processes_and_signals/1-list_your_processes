@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Lists all running processes showing USER, STARTED, and COMMAND
+# Lists all running processes with specific columns: USER, STARTED, COMMAND
 
-ps -eo use
-r,lstart,cmd
+ps -eo user,lstart,cmd --no-headers | awk '{print $1, $2" "$3" "$4" "$5" "$6, substr($0, index($0,$7))}'
+
