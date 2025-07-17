@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A script that shows PIDs and commands of all bash processes
+
+pgrep -a bash
+
