@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Lists all running processes showing USER, STARTED, and COMMAND
 
-ps -eo user,lstart,cmd
-
+ps -eo use
+r,lstart,cmd
