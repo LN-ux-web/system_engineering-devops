@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
-# Kill the 7-highlander process using SIGKILL (signal 9)
-
-# Find the PID of 7-highlander (pick first match)
-pid=$(ps -ax | grep '7-highlander' | grep -v grep | awk '{print $1}' | head -n 1)
-
-# If PID found, kill it with SIGKILL
-if [ -n "$pid" ]; then
-  kill -9 "$pid"
-fi
-
+# Kills all processes matching 7-highlander
+for pid in $(pgrep -f 7-highlander); do
+  kill -9 "$pid"
+done
