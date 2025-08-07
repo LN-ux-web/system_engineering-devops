@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-# Display the PID and full command path of all processes containing "bash"
-
-pgrep bash | while read pid; do
-    # Read the executable path of the process from /proc
-    exe_path=$(readlink /proc/$pid/exe)
-    echo "$pid $exe_path"
+# Kills all processes matching 7-highlander
+for pid in $(pgrep -f 7-highlander); do
+  kill -9 "$pid"
 done
-
